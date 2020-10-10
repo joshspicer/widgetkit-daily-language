@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("word", store: UserDefaults(suiteName: "group.com.joshspicer.DailyItalianWord"))
+    
+    var wordData: Data = Data()
+    
+    let Words = [
+        Word(native: "library", foreign: "biblioteca"),
+        Word(native: "cat", foreign: "gatto"),
+        Word(native: "boat", foreign: "imbarcazione")
+    ]
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            WordView(word: Word(native: "blah", foreign: "bahaa"))
+        }
     }
 }
 
