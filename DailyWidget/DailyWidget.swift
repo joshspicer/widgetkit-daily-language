@@ -33,18 +33,20 @@ struct Provider: TimelineProvider {
         
         // This is where u need to set `date:` to change every day!
         
-        let entry = WordEntry(date: Date(), word: Word(native: "hello", foreign: "ciao"))
-        
-        let entry2 = WordEntry(date: Date(), word: Word(native: "bye", foreign: "arrividerci"))
-        
-        let timeline = Timeline(entries: [entry, entry2], policy: .atEnd)
-        
-        completion(timeline)
+        QueryAPI.shared.getWord {
+            response in
+            
+            let entry = WordEntry(date: Date(), word: response ?? Word(native: "oops", foreign: "oops"))
+            // let entry2 = WordEntry(date: Date(), word: Word(native: "bye", foreign: "arrividerci"))
+                    
+            let timeline = Timeline(entries: [entry], policy: .atEnd)
+            completion(timeline)
+        }
     }
     
     typealias Entry = WordEntry
 }
-
+    
 struct WidgetEntryView: View {
     let entry: Provider.Entry
     
