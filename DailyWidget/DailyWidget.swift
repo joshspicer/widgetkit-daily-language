@@ -11,7 +11,6 @@ import SwiftUI
 struct WordEntry: TimelineEntry {
     var date: Date
     let word: Word
-    
 }
 
 struct Provider: TimelineProvider {
@@ -33,13 +32,18 @@ struct Provider: TimelineProvider {
         
         // This is where u need to set `date:` to change every day!
         
+        let now: Date = Date()
+        
+        let calendar = Calendar.current
+        let future = calendar.date(byAdding: .minute, value: 20, to: now)!
+        
         QueryAPI.shared.getWord {
             response in
             
-            let entry = WordEntry(date: Date(), word: response ?? Word(native: "oops", foreign: "oops"))
+            let entry = WordEntry(date: now, word: response ?? Word(native: "oops", foreign: "oops"))
             // let entry2 = WordEntry(date: Date(), word: Word(native: "bye", foreign: "arrividerci"))
                     
-            let timeline = Timeline(entries: [entry], policy: .atEnd)
+            let timeline = Timeline(entries: [entry], policy: .after(future))
             completion(timeline)
         }
     }
