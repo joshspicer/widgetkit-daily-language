@@ -29,7 +29,7 @@ struct Provider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WordEntry>) -> Void) {
-                
+        
         // Time of creation
         let now: Date = Date()
         
@@ -42,7 +42,7 @@ struct Provider: TimelineProvider {
             
             // WordEntry(date: Date(), word: Word(native: "Bye", foreign: "Arrivederci"))
             let entry = WordEntry(date: now, word: response ?? Word(native: "oops", foreign: "oops"))
-                    
+            
             let timeline = Timeline(entries: [entry], policy: .after(future))
             completion(timeline)
         }
@@ -50,38 +50,53 @@ struct Provider: TimelineProvider {
     
     typealias Entry = WordEntry
 }
-    
+
 struct WidgetEntryView: View {
     //let entry: Provider.Entry
     let word: Word
     let date: Date
     
     var body: some View {
-        VStack {
+        
+        VStack(alignment: .leading, spacing: 0, content: {
+            // Flags
+            HStack {
+                Text("🇮🇹")
+                    .font(.system(size: 45))
+                //                Text("->")
+                //                    .font(.system(size: 20))
+                //                Text("🇬🇧")
+                //                    .font(.system(size: 45))
+            }
+            .padding(.leading, 10)
+            .foregroundColor(.white)
+            // Words
             WordView(word: word)
-                .padding(.top, 30)
+                .padding(.leading, 10)
             Spacer ()
+            Spacer ()
+            // Created Timer
             VStack(alignment: .trailing, spacing: nil, content: {
                 Text("\(date, style: .relative) ago")
                     .font(.system(size: 8))
-                            .foregroundColor(.black)
+                    .foregroundColor(.white)
             })
             .padding(.bottom, 10)
             .padding(.leading, 10)
-           
-        }
+        })
+        
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(
             LinearGradient(
-                gradient: Gradient(colors: [.green, .white, .red]),
+                gradient: Gradient(colors: [.black]),
                 startPoint: .top,
                 endPoint: .bottomLeading)
-                .opacity(0.7)
-                .shadow(radius: 5.0))
- 
-
+                .opacity(0.90)
+                .shadow(radius: 10.0))
+        
+        
     }
-
+    
 }
 
 @main
@@ -94,7 +109,7 @@ struct DailyWidget: Widget {
         }).supportedFamilies([.systemSmall])
     }
 }
-    
+
 struct DailyWidget_Previews: PreviewProvider {
     static var previews: some View {
         WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date())
