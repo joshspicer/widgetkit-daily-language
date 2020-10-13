@@ -14,11 +14,30 @@ struct WordView: View {
     
     var body: some View {
         VStack {
-            Text(word.foreign)
-                .foregroundColor(.red)
-            Text(word.native)
-                .foregroundColor(.green)
-
+            HStack {
+                
+                Text("🇮🇹")
+                Text(word.foreign)
+                    .foregroundColor(.black)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .scaledToFill()
+                    .minimumScaleFactor(0.001)
+                    .lineLimit(1)
+                
             }
+            HStack {
+                Text("🇬🇧")
+                Text(word.native)
+                    .foregroundColor(.black)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .font(.subheadline)
+            }
+        }
+    }
+}
+
+struct WordView_Previews: PreviewProvider {
+    static var previews: some View {
+        WordView(word: Word(native: "English", foreign: "Italian"))
     }
 }

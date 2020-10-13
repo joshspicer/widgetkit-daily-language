@@ -6,23 +6,29 @@
 //
 
 import SwiftUI
+import WidgetKit
+
 
 struct ContentView: View {
     
-    @AppStorage("word", store: UserDefaults(suiteName: "group.com.joshspicer.DailyItalianWord"))
-    
-    var wordData: Data = Data()
-    
-    let Words = [
-        Word(native: "library", foreign: "biblioteca"),
-        Word(native: "cat", foreign: "gatto"),
-        Word(native: "boat", foreign: "imbarcazione")
-    ]
+//    @AppStorage("word", store: UserDefaults(suiteName: "group.com.joshspicer.DailyItalianWord"))
     
     
     var body: some View {
         VStack {
-            WordView(word: Word(native: "blah", foreign: "bahaa"))
+            Button(action: {
+                WidgetCenter.shared.reloadAllTimelines()
+            }) {
+                HStack {
+                    Text("New Word!")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(40)
+            }
         }
     }
 }

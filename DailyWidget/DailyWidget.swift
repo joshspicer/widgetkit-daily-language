@@ -29,19 +29,19 @@ struct Provider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WordEntry>) -> Void) {
-        
-        // This is where u need to set `date:` to change every day!
-        
+                
+        // Time of creation
         let now: Date = Date()
         
+        // The earliest moment we'd be ok with the widget refreshing
         let calendar = Calendar.current
         let future = calendar.date(byAdding: .minute, value: 20, to: now)!
         
         QueryAPI.shared.getWord {
             response in
             
+            // WordEntry(date: Date(), word: Word(native: "Bye", foreign: "Arrivederci"))
             let entry = WordEntry(date: now, word: response ?? Word(native: "oops", foreign: "oops"))
-            // let entry2 = WordEntry(date: Date(), word: Word(native: "bye", foreign: "arrividerci"))
                     
             let timeline = Timeline(entries: [entry], policy: .after(future))
             completion(timeline)
@@ -52,16 +52,36 @@ struct Provider: TimelineProvider {
 }
     
 struct WidgetEntryView: View {
-    let entry: Provider.Entry
+    //let entry: Provider.Entry
+    let word: Word
+    let date: Date
     
     var body: some View {
         VStack {
-            WordView(word: entry.word)
-            Text("\(entry.date, style: .relative) ago")
-                           .font(.caption)
-                           .foregroundColor(.purple)
+            WordView(word: word)
+                .padding(.top, 30)
+            Spacer ()
+            VStack(alignment: .trailing, spacing: nil, content: {
+                Text("\(date, style: .relative) ago")
+                    .font(.system(size: 8))
+                            .foregroundColor(.black)
+            })
+            .padding(.bottom, 10)
+            .padding(.leading, 10)
+           
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [.green, .white, .red]),
+                startPoint: .top,
+                endPoint: .bottomLeading)
+                .opacity(0.7)
+                .shadow(radius: 5.0))
+ 
+
     }
+
 }
 
 @main
@@ -70,9 +90,14 @@ struct DailyWidget: Widget {
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider(), content: {
-            entry in WidgetEntryView(entry: entry)
+            entry in WidgetEntryView(word: entry.word, date: entry.date)
         }).supportedFamilies([.systemSmall])
     }
-    
 }
     
+struct DailyWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date())
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
