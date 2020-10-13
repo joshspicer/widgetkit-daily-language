@@ -35,7 +35,7 @@ struct Provider: TimelineProvider {
         
         // The earliest moment we'd be ok with the widget refreshing
         let calendar = Calendar.current
-        let future = calendar.date(byAdding: .minute, value: 20, to: now)!
+        let future = calendar.date(byAdding: .hour, value: 24, to: now)!
         
         QueryAPI.shared.getWord {
             response in
