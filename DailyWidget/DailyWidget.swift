@@ -57,44 +57,62 @@ struct WidgetEntryView: View {
     let date: Date
     
     var body: some View {
-        
-        VStack(alignment: .leading, spacing: 0, content: {
-            // Flags
-            HStack {
-                Text("🇮🇹")
-                    .font(.system(size: 45))
-                //                Text("->")
-                //                    .font(.system(size: 20))
-                //                Text("🇬🇧")
-                //                    .font(.system(size: 45))
-            }
-            .padding(.leading, 10)
-            .foregroundColor(.white)
-            // Words
-            WordView(word: word)
+        GeometryReader { g in
+
+            VStack(alignment: .leading, spacing: 0, content: {
+                // Flags
+                HStack {
+                    Text("🇮🇹")
+                        .font(.system(size: 40))
+                    //                Text("->")
+                    //                    .font(.system(size: 20))
+                    //                Text("🇬🇧")
+                    //                    .font(.system(size: 45))
+                }
                 .padding(.leading, 10)
-            Spacer ()
-            Spacer ()
-            // Created Timer
-            VStack(alignment: .trailing, spacing: nil, content: {
-                Text("\(date, style: .relative) ago")
-                    .font(.system(size: 8))
-                    .foregroundColor(.white)
+                .padding(.top, 5)
+                .foregroundColor(.white)
+                // Words
+                VStack(alignment: .leading, spacing: nil, content: {
+                        HStack {
+                            Text(word.foreign)
+                                .fontWeight(.bold)
+                                .foregroundColor(.green)
+                                .lineLimit(1)
+                                .font(.largeTitle)
+                                .minimumScaleFactor(0.2)
+                            }
+
+                        HStack {
+                            Text(word.native)
+                                .fontWeight(.bold)
+                                .foregroundColor(.gray)
+                        }
+                })
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                Spacer ()
+                Spacer ()
+                // Created Timer
+                VStack(alignment: .trailing, spacing: nil, content: {
+                    Text("\(date, style: .relative) ago")
+                        .font(.system(size: 5))
+                        .foregroundColor(.white)
+                })
+                .padding(.bottom, 10)
+                .padding(.leading, 10)
             })
-            .padding(.bottom, 10)
-            .padding(.leading, 10)
-        })
-        
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [.black]),
-                startPoint: .top,
-                endPoint: .bottomLeading)
-                .opacity(0.90)
-                .shadow(radius: 10.0))
-        
-        
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [.black]),
+                    startPoint: .top,
+                    endPoint: .bottomLeading)
+                    .opacity(0.90)
+                    .shadow(radius: 10.0))
+            
+            
+        }
     }
     
 }
