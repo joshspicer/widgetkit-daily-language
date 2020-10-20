@@ -8,8 +8,8 @@
 import Foundation
 
 struct Word: Identifiable, Codable {
-    let native: String   //English
-    let foreign: String  //Italian
+    let native: String   // English (for now)
+    let foreign: String  // Italian (etc..)
     
     var id: String { native }
 }

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0843024A253A467F000DC6DD /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08430249253A467F000DC6DD /* Secrets.swift */; };
+		0843024B253A467F000DC6DD /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08430249253A467F000DC6DD /* Secrets.swift */; };
+		08684A74253E30E000AACF77 /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A73253E30E000AACF77 /* SupportedLanguages.swift */; };
+		08684A75253E30E000AACF77 /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A73253E30E000AACF77 /* SupportedLanguages.swift */; };
+		08684A7A253E46B400AACF77 /* Italian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A79253E46B400AACF77 /* Italian.swift */; };
+		08684A7B253E46B400AACF77 /* Italian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A79253E46B400AACF77 /* Italian.swift */; };
+		08684A7F253E46D300AACF77 /* LanguageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A7E253E46D300AACF77 /* LanguageFactory.swift */; };
+		08684A80253E46D300AACF77 /* LanguageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A7E253E46D300AACF77 /* LanguageFactory.swift */; };
+		08684A8D253E61BF00AACF77 /* French.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A8C253E61BF00AACF77 /* French.swift */; };
+		08684A8E253E61BF00AACF77 /* French.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A8C253E61BF00AACF77 /* French.swift */; };
+		08684A92253E621800AACF77 /* NoLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A91253E621800AACF77 /* NoLang.swift */; };
+		08684A93253E621800AACF77 /* NoLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A91253E621800AACF77 /* NoLang.swift */; };
 		08AE64B62531EC5E00AB157E /* DailyItalianWordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */; };
 		08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B72531EC5E00AB157E /* ContentView.swift */; };
 		08AE64BA2531EC6100AB157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AE64B92531EC6100AB157E /* Assets.xcassets */; };
@@ -21,12 +33,8 @@
 		08AE64E22531EF2F00AB157E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64E12531EF2F00AB157E /* Word.swift */; };
 		08AE64E52531EFA200AB157E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64E12531EF2F00AB157E /* Word.swift */; };
 		08AE64E82531F4B600AB157E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B72531EC5E00AB157E /* ContentView.swift */; };
-		08AE64F72531F82000AB157E /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64F62531F82000AB157E /* WordView.swift */; };
-		08AE64FA2531F8D900AB157E /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64F62531F82000AB157E /* WordView.swift */; };
 		08BD88CA2535169B00D05E77 /* QueryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD88C92535169B00D05E77 /* QueryAPI.swift */; };
 		08BD88CB2535169B00D05E77 /* QueryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD88C92535169B00D05E77 /* QueryAPI.swift */; };
-		08BD88CF2535216900D05E77 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD88CE2535216900D05E77 /* Secrets.swift */; };
-		08BD88D02535216900D05E77 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD88CE2535216900D05E77 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08430249253A467F000DC6DD /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		08684A73253E30E000AACF77 /* SupportedLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedLanguages.swift; sourceTree = "<group>"; };
+		08684A79253E46B400AACF77 /* Italian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Italian.swift; sourceTree = "<group>"; };
+		08684A7E253E46D300AACF77 /* LanguageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageFactory.swift; sourceTree = "<group>"; };
+		08684A8C253E61BF00AACF77 /* French.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French.swift; sourceTree = "<group>"; };
+		08684A91253E621800AACF77 /* NoLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLang.swift; sourceTree = "<group>"; };
 		08AE64B22531EC5E00AB157E /* DailyItalianWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyItalianWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItalianWordApp.swift; sourceTree = "<group>"; };
 		08AE64B72531EC5E00AB157E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,9 +84,7 @@
 		08AE64E12531EF2F00AB157E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		08AE64EE2531F4CB00AB157E /* DailyItalianWord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyItalianWord.entitlements; sourceTree = "<group>"; };
 		08AE64F12531F60200AB157E /* DailyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWidgetExtension.entitlements; sourceTree = "<group>"; };
-		08AE64F62531F82000AB157E /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		08BD88C92535169B00D05E77 /* QueryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryAPI.swift; sourceTree = "<group>"; };
-		08BD88CE2535216900D05E77 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08684A78253E361A00AACF77 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				08684A79253E46B400AACF77 /* Italian.swift */,
+				08684A7E253E46D300AACF77 /* LanguageFactory.swift */,
+				08684A8C253E61BF00AACF77 /* French.swift */,
+				08684A91253E621800AACF77 /* NoLang.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
 		08AE64A92531EC5E00AB157E = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +141,7 @@
 		08AE64B42531EC5E00AB157E /* DailyItalianWord */ = {
 			isa = PBXGroup;
 			children = (
+				08684A78253E361A00AACF77 /* Languages */,
 				08AE64EE2531F4CB00AB157E /* DailyItalianWord.entitlements */,
 				08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */,
 				08AE64B72531EC5E00AB157E /* ContentView.swift */,
@@ -125,9 +149,9 @@
 				08AE64BE2531EC6100AB157E /* Info.plist */,
 				08AE64BB2531EC6100AB157E /* Preview Content */,
 				08AE64E12531EF2F00AB157E /* Word.swift */,
-				08AE64F62531F82000AB157E /* WordView.swift */,
 				08BD88C92535169B00D05E77 /* QueryAPI.swift */,
-				08BD88CE2535216900D05E77 /* Secrets.swift */,
+				08430249253A467F000DC6DD /* Secrets.swift */,
+				08684A73253E30E000AACF77 /* SupportedLanguages.swift */,
 			);
 			path = DailyItalianWord;
 			sourceTree = "<group>";
@@ -261,10 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */,
-				08BD88CF2535216900D05E77 /* Secrets.swift in Sources */,
-				08AE64F72531F82000AB157E /* WordView.swift in Sources */,
+				08684A8D253E61BF00AACF77 /* French.swift in Sources */,
+				0843024A253A467F000DC6DD /* Secrets.swift in Sources */,
+				08684A7A253E46B400AACF77 /* Italian.swift in Sources */,
+				08684A92253E621800AACF77 /* NoLang.swift in Sources */,
 				08AE64E22531EF2F00AB157E /* Word.swift in Sources */,
+				08684A74253E30E000AACF77 /* SupportedLanguages.swift in Sources */,
 				08AE64D72531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
+				08684A7F253E46D300AACF77 /* LanguageFactory.swift in Sources */,
 				08AE64B62531EC5E00AB157E /* DailyItalianWordApp.swift in Sources */,
 				08BD88CA2535169B00D05E77 /* QueryAPI.swift in Sources */,
 			);
@@ -275,10 +303,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AE64D62531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
-				08BD88D02535216900D05E77 /* Secrets.swift in Sources */,
-				08AE64FA2531F8D900AB157E /* WordView.swift in Sources */,
+				08684A8E253E61BF00AACF77 /* French.swift in Sources */,
+				0843024B253A467F000DC6DD /* Secrets.swift in Sources */,
+				08684A7B253E46B400AACF77 /* Italian.swift in Sources */,
+				08684A93253E621800AACF77 /* NoLang.swift in Sources */,
 				08AE64D12531EC7500AB157E /* DailyWidget.swift in Sources */,
+				08684A75253E30E000AACF77 /* SupportedLanguages.swift in Sources */,
 				08AE64E82531F4B600AB157E /* ContentView.swift in Sources */,
+				08684A80253E46D300AACF77 /* LanguageFactory.swift in Sources */,
 				08AE64E52531EFA200AB157E /* Word.swift in Sources */,
 				08BD88CB2535169B00D05E77 /* QueryAPI.swift in Sources */,
 			);
