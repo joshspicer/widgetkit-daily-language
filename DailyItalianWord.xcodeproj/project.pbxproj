@@ -19,6 +19,8 @@
 		08684A8E253E61BF00AACF77 /* French.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A8C253E61BF00AACF77 /* French.swift */; };
 		08684A92253E621800AACF77 /* NoLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A91253E621800AACF77 /* NoLang.swift */; };
 		08684A93253E621800AACF77 /* NoLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A91253E621800AACF77 /* NoLang.swift */; };
+		08684A97253E755D00AACF77 /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A96253E755C00AACF77 /* Japanese.swift */; };
+		08684A98253E755D00AACF77 /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A96253E755C00AACF77 /* Japanese.swift */; };
 		08AE64B62531EC5E00AB157E /* DailyItalianWordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */; };
 		08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B72531EC5E00AB157E /* ContentView.swift */; };
 		08AE64BA2531EC6100AB157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AE64B92531EC6100AB157E /* Assets.xcassets */; };
@@ -68,6 +70,7 @@
 		08684A7E253E46D300AACF77 /* LanguageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageFactory.swift; sourceTree = "<group>"; };
 		08684A8C253E61BF00AACF77 /* French.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French.swift; sourceTree = "<group>"; };
 		08684A91253E621800AACF77 /* NoLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLang.swift; sourceTree = "<group>"; };
+		08684A96253E755C00AACF77 /* Japanese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
 		08AE64B22531EC5E00AB157E /* DailyItalianWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyItalianWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItalianWordApp.swift; sourceTree = "<group>"; };
 		08AE64B72531EC5E00AB157E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 				08684A7E253E46D300AACF77 /* LanguageFactory.swift */,
 				08684A8C253E61BF00AACF77 /* French.swift */,
 				08684A91253E621800AACF77 /* NoLang.swift */,
+				08684A96253E755C00AACF77 /* Japanese.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -284,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08684A97253E755D00AACF77 /* Japanese.swift in Sources */,
 				08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */,
 				08684A8D253E61BF00AACF77 /* French.swift in Sources */,
 				0843024A253A467F000DC6DD /* Secrets.swift in Sources */,
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08684A98253E755D00AACF77 /* Japanese.swift in Sources */,
 				08AE64D62531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
 				08684A8E253E61BF00AACF77 /* French.swift in Sources */,
 				0843024B253A467F000DC6DD /* Secrets.swift in Sources */,
@@ -451,6 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
 				DEVELOPMENT_TEAM = V3AVXCHMVA;
 				ENABLE_PREVIEWS = YES;
@@ -475,6 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
 				DEVELOPMENT_TEAM = V3AVXCHMVA;
 				ENABLE_PREVIEWS = YES;
@@ -498,6 +506,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V3AVXCHMVA;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +529,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V3AVXCHMVA;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -3,7 +3,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-r = requests.get("https://1000mostcommonwords.com/1000-most-common-french-words/")
+r = requests.get("https://1000mostcommonwords.com/1000-most-common-japanese-words/")
 soup = BeautifulSoup(r.text, 'html.parser')
 
 trs = soup.find_all('tr')
@@ -15,5 +15,5 @@ for tr in trs:
     native = tds[2].get_text()
     foreign = tds[1].get_text()
     
-    f.write("{}\n".format(native))
     f.write("{}\n".format(foreign))
+    f.write("{}\n".format(native))

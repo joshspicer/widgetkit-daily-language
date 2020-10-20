@@ -18,11 +18,13 @@ class LanguageFactory {
     public static func Create(lang: SupportedLanguages) -> LanguageBase {
         switch lang {
         case .Italian:
-            return Italian();
+            return Italian()
         case .French:
-            return French();
+            return French()
+        case .Japanese:
+            return Japanese()
         default:
-            return NoLang();
+            return NoLang()
         
         }
     }

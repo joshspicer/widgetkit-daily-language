@@ -12,4 +12,5 @@ enum SupportedLanguages: String, Equatable, CaseIterable, Identifiable {
     
     case Italian
     case French
+    case Japanese
 }
