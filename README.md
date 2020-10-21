@@ -1,6 +1,6 @@
 # widgetkit-daily-language
 
-This simple SwiftUI project utilizes iOS 14's WidgetKit to display a simple, at-a-glance widget with a randomly selected {{Foreign Word}} <-> {{Native Word}} pair.
+This simple SwiftUI project utilizes iOS 14's WidgetKit to display a simple, at-a-glance widget with a randomly selected `{{Foreign Word}} <-> {{Native Word}}` pair.
 
 Learn a new language with a new word a day from a language you'd like to learn.  
 
