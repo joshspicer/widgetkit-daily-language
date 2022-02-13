@@ -7,7 +7,7 @@
 
 import Foundation
 
-class French : LanguageBase {
+class Morse : LanguageBase {
     
     let words: [Word] = [
         Word(native: "A", foreign:  ".-"),
