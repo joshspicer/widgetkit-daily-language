@@ -23,6 +23,8 @@ class LanguageFactory {
             return French()
         case .Japanese:
             return Japanese()
+        case .Morse
+            return Morse()
         default:
             return NoLang()
         
