@@ -16,16 +16,16 @@ struct WordEntry: TimelineEntry {
 
 struct Provider: TimelineProvider {
     
-    @AppStorage("language", store: UserDefaults(suiteName: "group.com.joshspicer.DailyItalianWord"))
+    @AppStorage("language", store: UserDefaults(suiteName: "group.com.joshspicer.dailyword"))
     var language: SupportedLanguages = SupportedLanguages.Italian
     
     func placeholder(in context: Context) -> WordEntry {
-        return WordEntry(date: Date(), word: Word(native: "placeholder", foreign: "placeholder"), flag: "🇺🇸")
+        return WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸")
     }
     
     func getSnapshot(in context: Context, completion: @escaping (WordEntry) -> Void) {
         
-        let entry = WordEntry(date: Date(), word: Word(native: "getsnapshot", foreign: "getsnapshot"), flag: "🇺🇸")
+        let entry = WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸")
         completion(entry)
     }
     
@@ -55,18 +55,23 @@ struct WidgetEntryView: View {
     let word: Word
     let date: Date
     let flag: String
-    
+
     var body: some View {
+        // TODO: Move this bool to a setting in the companion app.
+        let isSimpleMode = word.native.count <= 2
         GeometryReader { g in
             
             VStack(alignment: .leading, spacing: 0, content: {
+                if (!isSimpleMode) {
                 // Flag
                 HStack {
                     Text(flag)
                         .font(.system(size: 40))
                 }
-                .padding(.top, 5)
+                .padding(.top, 10)
+                .padding(.horizontal, 10)
                 .foregroundColor(.white)
+                }
                 // Words
                 VStack(alignment: .leading, spacing: nil, content: {
                     HStack {
@@ -74,16 +79,18 @@ struct WidgetEntryView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.green)
                             .lineLimit(1)
-                            .font(.largeTitle)
+                            .font(isSimpleMode ? .system(size: 70) : .largeTitle)
                             .minimumScaleFactor(0.2)
                     }
                     HStack {
                         Text(word.native)
                             .fontWeight(.bold)
+                            .font(isSimpleMode ? .system(size: 50) : .system(.body))
                             .foregroundColor(.gray)
                     }
                 })
                 .padding(.trailing, 10)
+                .padding(.horizontal, 10)
                 Spacer ()
             })
             
@@ -114,6 +121,8 @@ struct DailyWidget: Widget {
 struct DailyWidget_Previews: PreviewProvider {
     static var previews: some View {
         WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date(), flag: "🇮🇹")
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        WidgetEntryView (word: Word(native: "v", foreign: "...-"), date: Date(), flag: "🤖")
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

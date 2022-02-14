@@ -3,6 +3,7 @@
 output.txt
 words.txt
 
+.DS_Store
 .venv
 
 # Xcode

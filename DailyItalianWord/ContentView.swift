@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @State private var selection = SupportedLanguages.Italian
     
-    @AppStorage("language", store: UserDefaults(suiteName: "group.com.joshspicer.DailyItalianWord"))
+    @AppStorage("language", store: UserDefaults(suiteName: "group.com.joshspicer.dailyword"))
     var language: SupportedLanguages = SupportedLanguages.Italian
     
     var body: some View {
