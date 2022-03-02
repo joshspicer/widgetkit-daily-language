@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0356CE2527B9A78300CDBB0A /* Morse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356CE2427B9A78300CDBB0A /* Morse.swift */; };
 		0356CE2627B9A91400CDBB0A /* Morse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356CE2427B9A78300CDBB0A /* Morse.swift */; };
+		0364956227CEE81400813442 /* NationalFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364956127CEE81400813442 /* NationalFlags.swift */; };
+		0364956327CEE81400813442 /* NationalFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364956127CEE81400813442 /* NationalFlags.swift */; };
 		08684A74253E30E000AACF77 /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A73253E30E000AACF77 /* SupportedLanguages.swift */; };
 		08684A75253E30E000AACF77 /* SupportedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A73253E30E000AACF77 /* SupportedLanguages.swift */; };
 		08684A7A253E46B400AACF77 /* Italian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A79253E46B400AACF77 /* Italian.swift */; };
@@ -63,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0356CE2427B9A78300CDBB0A /* Morse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Morse.swift; sourceTree = "<group>"; };
+		0364956127CEE81400813442 /* NationalFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalFlags.swift; sourceTree = "<group>"; };
 		08684A73253E30E000AACF77 /* SupportedLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedLanguages.swift; sourceTree = "<group>"; };
 		08684A79253E46B400AACF77 /* Italian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Italian.swift; sourceTree = "<group>"; };
 		08684A7E253E46D300AACF77 /* LanguageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageFactory.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 				08684A8C253E61BF00AACF77 /* French.swift */,
 				08684A91253E621800AACF77 /* NoLang.swift */,
 				08684A96253E755C00AACF77 /* Japanese.swift */,
+				0364956127CEE81400813442 /* NationalFlags.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0356CE2527B9A78300CDBB0A /* Morse.swift in Sources */,
+				0364956227CEE81400813442 /* NationalFlags.swift in Sources */,
 				08684A97253E755D00AACF77 /* Japanese.swift in Sources */,
 				08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */,
 				08684A8D253E61BF00AACF77 /* French.swift in Sources */,
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08684A98253E755D00AACF77 /* Japanese.swift in Sources */,
+				0364956327CEE81400813442 /* NationalFlags.swift in Sources */,
 				08AE64D62531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
 				08684A8E253E61BF00AACF77 /* French.swift in Sources */,
 				08684A7B253E46B400AACF77 /* Italian.swift in Sources */,
@@ -451,7 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				ENABLE_PREVIEWS = YES;
@@ -461,9 +467,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,7 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				ENABLE_PREVIEWS = YES;
@@ -487,9 +494,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,7 +510,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,10 +518,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -526,7 +535,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DailyWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,10 +543,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

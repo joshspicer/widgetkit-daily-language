@@ -12,6 +12,7 @@ struct WordEntry: TimelineEntry {
     var date: Date
     let word: Word
     let flag: String
+    let language: SupportedLanguages
 }
 
 struct Provider: TimelineProvider {
@@ -20,12 +21,12 @@ struct Provider: TimelineProvider {
     var language: SupportedLanguages = SupportedLanguages.Italian
     
     func placeholder(in context: Context) -> WordEntry {
-        return WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸")
+        return WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸", language: .Italian)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (WordEntry) -> Void) {
         
-        let entry = WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸")
+        let entry = WordEntry(date: Date(), word: Word(native: "Hello", foreign: "Hello"), flag: "🇺🇸", language: .Italian)
         completion(entry)
     }
     
@@ -41,7 +42,7 @@ struct Provider: TimelineProvider {
         let lang = LanguageFactory.Create(lang: language)
         let randWord = lang.getRandom()
         
-        let entry = WordEntry(date: now, word: randWord, flag: lang.getFlag())
+        let entry = WordEntry(date: now, word: randWord, flag: lang.getFlag(), language: language)
         let timeline = Timeline(entries: [entry], policy: .after(future))
         
         completion(timeline)
@@ -55,14 +56,15 @@ struct WidgetEntryView: View {
     let word: Word
     let date: Date
     let flag: String
+    let language: SupportedLanguages
 
     var body: some View {
-        // TODO: Move this bool to a setting in the companion app.
-        let isSimpleMode = word.native.count <= 2
+        let isMorse = language == .Morse
+        let isNatlFlags = language == .NationalFlags
         GeometryReader { g in
             
             VStack(alignment: .leading, spacing: 0, content: {
-                if (!isSimpleMode) {
+                if (!isMorse && !isNatlFlags) {
                 // Flag
                 HStack {
                     Text(flag)
@@ -79,13 +81,13 @@ struct WidgetEntryView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.green)
                             .lineLimit(1)
-                            .font(isSimpleMode ? .system(size: 70) : .largeTitle)
+                            .font(isMorse || isNatlFlags ? .system(size: 70) : .largeTitle)
                             .minimumScaleFactor(0.2)
                     }
                     HStack {
                         Text(word.native)
                             .fontWeight(.bold)
-                            .font(isSimpleMode ? .system(size: 50) : .system(.body))
+                            .font(isMorse ? .system(size: 50) : .system(.body))
                             .foregroundColor(.gray)
                     }
                 })
@@ -113,16 +115,18 @@ struct DailyWidget: Widget {
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider(), content: {
-            entry in WidgetEntryView(word: entry.word, date: entry.date, flag: entry.flag)
+            entry in WidgetEntryView(word: entry.word, date: entry.date, flag: entry.flag, language: entry.language)
         }).supportedFamilies([.systemSmall])
     }
 }
 
 struct DailyWidget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date(), flag: "🇮🇹")
+        WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date(), flag: "🇮🇹", language: .Italian)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        WidgetEntryView (word: Word(native: "v", foreign: "...-"), date: Date(), flag: "🤖")
+        WidgetEntryView (word: Word(native: "v", foreign: "...-"), date: Date(), flag: "🤖", language: .Morse)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        WidgetEntryView (word: Word(native: "United States", foreign: "🇺🇸"), date: Date(), flag: "", language: .NationalFlags)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

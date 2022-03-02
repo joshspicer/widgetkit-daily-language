@@ -14,4 +14,5 @@ enum SupportedLanguages: String, Equatable, CaseIterable, Identifiable {
     case French
     case Japanese
     case Morse
+    case NationalFlags
 }
