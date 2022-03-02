@@ -7,7 +7,11 @@ Learn a new language with a new word a day from a language you'd like to learn.
 Current Languages include:
 * `Italian <-> English`
 * `French <-> English` 
-* `Japanese <-> English` 
+* `Japanese <-> English`
+
+As well as some 'non-language' language sets:
+* `Morse Code <-> English`
+* `National Flag <-> Country Name`
 
 ...with wordlists [extracted](https://github.com/joshspicer/widgetkit-daily-italian/blob/main/extract.py) using a quick BeautifulSoup script from 1000mostcommonwords.com .
 
