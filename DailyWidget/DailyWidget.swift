@@ -89,6 +89,7 @@ struct WidgetEntryView: View {
                             .fontWeight(.bold)
                             .font(isMorse ? .system(size: 50) : .system(.body))
                             .foregroundColor(.gray)
+                            .padding(.leading, isNatlFlags ? 2 : 0)
                     }
                 })
                 .padding(.trailing, 10)

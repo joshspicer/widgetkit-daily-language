@@ -23,7 +23,7 @@
 		08684A93253E621800AACF77 /* NoLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A91253E621800AACF77 /* NoLang.swift */; };
 		08684A97253E755D00AACF77 /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A96253E755C00AACF77 /* Japanese.swift */; };
 		08684A98253E755D00AACF77 /* Japanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684A96253E755C00AACF77 /* Japanese.swift */; };
-		08AE64B62531EC5E00AB157E /* DailyItalianWordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */; };
+		08AE64B62531EC5E00AB157E /* DailyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B52531EC5E00AB157E /* DailyWord.swift */; };
 		08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE64B72531EC5E00AB157E /* ContentView.swift */; };
 		08AE64BA2531EC6100AB157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AE64B92531EC6100AB157E /* Assets.xcassets */; };
 		08AE64BD2531EC6100AB157E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AE64BC2531EC6100AB157E /* Preview Assets.xcassets */; };
@@ -72,8 +72,8 @@
 		08684A8C253E61BF00AACF77 /* French.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French.swift; sourceTree = "<group>"; };
 		08684A91253E621800AACF77 /* NoLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLang.swift; sourceTree = "<group>"; };
 		08684A96253E755C00AACF77 /* Japanese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japanese.swift; sourceTree = "<group>"; };
-		08AE64B22531EC5E00AB157E /* DailyItalianWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyItalianWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItalianWordApp.swift; sourceTree = "<group>"; };
+		08AE64B22531EC5E00AB157E /* DailyWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08AE64B52531EC5E00AB157E /* DailyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWord.swift; sourceTree = "<group>"; };
 		08AE64B72531EC5E00AB157E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08AE64B92531EC6100AB157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08AE64BC2531EC6100AB157E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,7 +86,6 @@
 		08AE64D32531EC7700AB157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08AE64D52531EC7700AB157E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08AE64E12531EF2F00AB157E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		08AE64EE2531F4CB00AB157E /* DailyItalianWord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyItalianWord.entitlements; sourceTree = "<group>"; };
 		08AE64F12531F60200AB157E /* DailyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				08AE64F12531F60200AB157E /* DailyWidgetExtension.entitlements */,
-				08AE64B42531EC5E00AB157E /* DailyItalianWord */,
+				08AE64B42531EC5E00AB157E /* DailyWord */,
 				08AE64CF2531EC7500AB157E /* DailyWidget */,
 				08AE64CA2531EC7500AB157E /* Frameworks */,
 				08AE64B32531EC5E00AB157E /* Products */,
@@ -138,18 +137,17 @@
 		08AE64B32531EC5E00AB157E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08AE64B22531EC5E00AB157E /* DailyItalianWord.app */,
+				08AE64B22531EC5E00AB157E /* DailyWord.app */,
 				08AE64C92531EC7500AB157E /* DailyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		08AE64B42531EC5E00AB157E /* DailyItalianWord */ = {
+		08AE64B42531EC5E00AB157E /* DailyWord */ = {
 			isa = PBXGroup;
 			children = (
 				08684A78253E361A00AACF77 /* Languages */,
-				08AE64EE2531F4CB00AB157E /* DailyItalianWord.entitlements */,
-				08AE64B52531EC5E00AB157E /* DailyItalianWordApp.swift */,
+				08AE64B52531EC5E00AB157E /* DailyWord.swift */,
 				08AE64B72531EC5E00AB157E /* ContentView.swift */,
 				08AE64B92531EC6100AB157E /* Assets.xcassets */,
 				08AE64BE2531EC6100AB157E /* Info.plist */,
@@ -157,7 +155,7 @@
 				08AE64E12531EF2F00AB157E /* Word.swift */,
 				08684A73253E30E000AACF77 /* SupportedLanguages.swift */,
 			);
-			path = DailyItalianWord;
+			path = DailyWord;
 			sourceTree = "<group>";
 		};
 		08AE64BB2531EC6100AB157E /* Preview Content */ = {
@@ -191,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08AE64B12531EC5E00AB157E /* DailyItalianWord */ = {
+		08AE64B12531EC5E00AB157E /* DailyWord */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08AE64C12531EC6100AB157E /* Build configuration list for PBXNativeTarget "DailyItalianWord" */;
+			buildConfigurationList = 08AE64C12531EC6100AB157E /* Build configuration list for PBXNativeTarget "DailyWord" */;
 			buildPhases = (
 				08AE64AE2531EC5E00AB157E /* Sources */,
 				08AE64AF2531EC5E00AB157E /* Frameworks */,
@@ -205,9 +203,9 @@
 			dependencies = (
 				08AE64D92531EC7700AB157E /* PBXTargetDependency */,
 			);
-			name = DailyItalianWord;
+			name = DailyWord;
 			productName = DailyItalianWord;
-			productReference = 08AE64B22531EC5E00AB157E /* DailyItalianWord.app */;
+			productReference = 08AE64B22531EC5E00AB157E /* DailyWord.app */;
 			productType = "com.apple.product-type.application";
 		};
 		08AE64C82531EC7500AB157E /* DailyWidgetExtension */ = {
@@ -244,7 +242,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08AE64AD2531EC5E00AB157E /* Build configuration list for PBXProject "DailyItalianWord" */;
+			buildConfigurationList = 08AE64AD2531EC5E00AB157E /* Build configuration list for PBXProject "DailyWord" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,7 +255,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08AE64B12531EC5E00AB157E /* DailyItalianWord */,
+				08AE64B12531EC5E00AB157E /* DailyWord */,
 				08AE64C82531EC7500AB157E /* DailyWidgetExtension */,
 			);
 		};
@@ -299,7 +297,7 @@
 				08684A74253E30E000AACF77 /* SupportedLanguages.swift in Sources */,
 				08AE64D72531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
 				08684A7F253E46D300AACF77 /* LanguageFactory.swift in Sources */,
-				08AE64B62531EC5E00AB157E /* DailyItalianWordApp.swift in Sources */,
+				08AE64B62531EC5E00AB157E /* DailyWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,19 +453,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DailyWord/DailyWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DailyWord/Preview Content\"";
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DailyItalianWord/Info.plist;
+				INFOPLIST_FILE = DailyWord/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -482,19 +480,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DailyItalianWord/DailyItalianWord.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DailyWord/DailyWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyItalianWord/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DailyWord/Preview Content\"";
 				DEVELOPMENT_TEAM = N7C8DEK852;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DailyItalianWord/Info.plist;
+				INFOPLIST_FILE = DailyWord/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -518,7 +516,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -543,7 +541,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -556,7 +554,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08AE64AD2531EC5E00AB157E /* Build configuration list for PBXProject "DailyItalianWord" */ = {
+		08AE64AD2531EC5E00AB157E /* Build configuration list for PBXProject "DailyWord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08AE64BF2531EC6100AB157E /* Debug */,
@@ -565,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08AE64C12531EC6100AB157E /* Build configuration list for PBXNativeTarget "DailyItalianWord" */ = {
+		08AE64C12531EC6100AB157E /* Build configuration list for PBXNativeTarget "DailyWord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08AE64C22531EC6100AB157E /* Debug */,
