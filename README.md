@@ -1,5 +1,7 @@
 # widgetkit-daily-language
 
+> Download for iOS/iPad OS/MacOS here: https://apps.apple.com/us/app/daily-word-language-widget/id1535573526
+
 This simple SwiftUI project utilizes iOS 14's WidgetKit to display a simple, at-a-glance widget with a randomly selected `{{Foreign Word}} <-> {{Native Word}}` pair.
 
 Learn a new language with a new word a day from a language you'd like to learn.  
@@ -7,7 +9,11 @@ Learn a new language with a new word a day from a language you'd like to learn.
 Current Languages include:
 * `Italian <-> English`
 * `French <-> English` 
-* `Japanese <-> English` 
+* `Japanese <-> English`
+
+As well as some 'non-language' language sets:
+* `Morse Code <-> English`
+* `National Flag <-> Country Name`
 
 ...with wordlists [extracted](https://github.com/joshspicer/widgetkit-daily-italian/blob/main/extract.py) using a quick BeautifulSoup script from 1000mostcommonwords.com .
 
