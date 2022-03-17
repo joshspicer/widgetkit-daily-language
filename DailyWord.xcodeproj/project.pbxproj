@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0341BD6727E364F500A81E70 /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BD6627E364F500A81E70 /* CountryCodes.swift */; };
+		0341BD6827E364FA00A81E70 /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BD6627E364F500A81E70 /* CountryCodes.swift */; };
 		0356CE2527B9A78300CDBB0A /* Morse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356CE2427B9A78300CDBB0A /* Morse.swift */; };
 		0356CE2627B9A91400CDBB0A /* Morse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356CE2427B9A78300CDBB0A /* Morse.swift */; };
 		0364956227CEE81400813442 /* NationalFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364956127CEE81400813442 /* NationalFlags.swift */; };
@@ -64,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0341BD6627E364F500A81E70 /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
 		0356CE2427B9A78300CDBB0A /* Morse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Morse.swift; sourceTree = "<group>"; };
 		0364956127CEE81400813442 /* NationalFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalFlags.swift; sourceTree = "<group>"; };
 		08684A73253E30E000AACF77 /* SupportedLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedLanguages.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 				08684A91253E621800AACF77 /* NoLang.swift */,
 				08684A96253E755C00AACF77 /* Japanese.swift */,
 				0364956127CEE81400813442 /* NationalFlags.swift */,
+				0341BD6627E364F500A81E70 /* CountryCodes.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -290,6 +294,7 @@
 				0364956227CEE81400813442 /* NationalFlags.swift in Sources */,
 				08684A97253E755D00AACF77 /* Japanese.swift in Sources */,
 				08AE64B82531EC5E00AB157E /* ContentView.swift in Sources */,
+				0341BD6727E364F500A81E70 /* CountryCodes.swift in Sources */,
 				08684A8D253E61BF00AACF77 /* French.swift in Sources */,
 				08684A7A253E46B400AACF77 /* Italian.swift in Sources */,
 				08684A92253E621800AACF77 /* NoLang.swift in Sources */,
@@ -309,6 +314,7 @@
 				0364956327CEE81400813442 /* NationalFlags.swift in Sources */,
 				08AE64D62531EC7700AB157E /* DailyWidget.intentdefinition in Sources */,
 				08684A8E253E61BF00AACF77 /* French.swift in Sources */,
+				0341BD6827E364FA00A81E70 /* CountryCodes.swift in Sources */,
 				08684A7B253E46B400AACF77 /* Italian.swift in Sources */,
 				08684A93253E621800AACF77 /* NoLang.swift in Sources */,
 				08AE64D12531EC7500AB157E /* DailyWidget.swift in Sources */,
@@ -465,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -492,7 +498,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -516,7 +522,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -541,7 +547,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshspicer.DailyItalianWord.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

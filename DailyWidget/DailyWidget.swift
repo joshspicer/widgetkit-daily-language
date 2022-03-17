@@ -61,6 +61,7 @@ struct WidgetEntryView: View {
     var body: some View {
         let isMorse = language == .Morse
         let isNatlFlags = language == .NationalFlags
+        let isCountryCode = language == .CountryCodes
         GeometryReader { g in
             
             VStack(alignment: .leading, spacing: 0, content: {
@@ -68,7 +69,7 @@ struct WidgetEntryView: View {
                 // Flag
                 HStack {
                     Text(flag)
-                        .font(.system(size: 40))
+                        .font(isCountryCode ? .system(size: 25) : .system(size: 40))
                 }
                 .padding(.top, 10)
                 .padding(.horizontal, 10)
@@ -88,8 +89,9 @@ struct WidgetEntryView: View {
                         Text(word.native)
                             .fontWeight(.bold)
                             .font(isMorse ? .system(size: 50) : .system(.body))
+                            .minimumScaleFactor(0.2)
                             .foregroundColor(.gray)
-                            .padding(.leading, isNatlFlags ? 2 : 0)
+                            .padding(.leading, isNatlFlags ? 4 : 0)
                     }
                 })
                 .padding(.trailing, 10)
@@ -125,9 +127,18 @@ struct DailyWidget_Previews: PreviewProvider {
     static var previews: some View {
         WidgetEntryView (word: Word(native: "Bye", foreign: "Arrivederci"), date: Date(), flag: "🇮🇹", language: .Italian)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+
         WidgetEntryView (word: Word(native: "v", foreign: "...-"), date: Date(), flag: "🤖", language: .Morse)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+
         WidgetEntryView (word: Word(native: "United States", foreign: "🇺🇸"), date: Date(), flag: "", language: .NationalFlags)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+
+        WidgetEntryView (word: Word(native: "Qatar", foreign: "🇶🇦"), date: Date(), flag: "", language: .NationalFlags)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+
+        WidgetEntryView (word: Word(native: "United Kingdom", foreign: "+44"), date: Date(), flag: "☎️", language: .CountryCodes)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
     }
 }

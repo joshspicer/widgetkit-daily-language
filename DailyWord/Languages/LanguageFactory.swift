@@ -27,6 +27,8 @@ class LanguageFactory {
             return Morse()
         case .NationalFlags:
             return NationalFlags()
+        case .CountryCodes:
+            return CountryCodes()
         default:
             return NoLang()
         
