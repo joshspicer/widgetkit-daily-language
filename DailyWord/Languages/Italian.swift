@@ -941,7 +941,7 @@ class Italian : LanguageBase {
         Word(native: "to indicate", foreign: "indicare"),
         Word(native: "to discover", foreign: "scoprire"),
         Word(native: "to throw", foreign: "buttare"),
-        Word(native: "prepare", foreign: "preparare"),
+        Word(native: "to prepare", foreign: "preparare"),
         Word(native: "to beat", foreign: "battere"),
         Word(native: "to slide", foreign: "scorrere"),
         Word(native: "to interest", foreign: "interessare"),
