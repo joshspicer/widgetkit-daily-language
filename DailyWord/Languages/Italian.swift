@@ -548,7 +548,7 @@ class Italian : LanguageBase {
         Word(native: "particolare", foreign: "particular"),
         Word(native: "careful", foreign: "attento"),
         Word(native: "huge", foreign: "enorme"),
-        Word(native: "White", foreign: "bianco"),
+        Word(native: "white", foreign: "bianco"),
         Word(native: "thin", foreign: "sottile"),
         Word(native: "strong", foreign: "forte"),
         Word(native: "sad", foreign: "triste"),
