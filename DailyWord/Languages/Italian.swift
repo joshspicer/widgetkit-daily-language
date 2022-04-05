@@ -1193,4 +1193,3 @@ class Italian : LanguageBase {
         return "🇮🇹"
     }
 }
-    
