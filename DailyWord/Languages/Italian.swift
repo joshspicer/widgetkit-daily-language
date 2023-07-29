@@ -612,7 +612,7 @@ class Italian : LanguageBase {
         Word(native: "useless", foreign: "inutile"),
         Word(native: "national", foreign: "nazionale"),
         Word(native: "modern", foreign: "moderno"),
-        Word(native: "bass", foreign: "basso"),
+        Word(native: "short", foreign: "basso"),
         Word(native: "numerous", foreign: "numeroso"),
         Word(native: "simple", foreign: "semplice"),
         Word(native: "similar", foreign: "simile"),
